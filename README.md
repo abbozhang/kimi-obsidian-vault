@@ -1,56 +1,103 @@
-# Obsidian Vault
+# README.md
 
-我的 Obsidian 知识库，由 Kimi (Claw) 协助管理。
+欢迎来到 **Abbo 的 Obsidian Vault** 🧠
 
-## 用途
+这是一个由 Kimi AI 协助管理的个人知识库，专注于AI领域学习、产品思考和日常记录。
 
-- 📝 每日工作、生活、AI 新闻日志
-- 💡 灵感收集与材料整理
-- 🧠 知识沉淀与周报管理
-- 🗂️ 笔记索引与导航
+---
 
-## 结构
+## 📂 文件结构
 
 ```
 obsidian-vault/
-├── 📄 核心配置文件（根目录）
-│   ├── SOUL.md         # AI 助手的核心价值观和行为准则
-│   ├── USER.md         # 用户信息和偏好
-│   ├── AGENTS.md       # Agent 配置
-│   ├── TOOLS.md        # 工具集成
-│   ├── BOOTSTRAP.md    # 启动配置
-│   └── IDENTITY.md     # 身份识别
-├── 📓 Daily/          # 每日笔记（工作、生活、Claw日志、AI新闻）
-├── 📥 Inbox/          # 灵感收件箱和外部材料
-│   ├── 一些AI需求.md
-│   └── 材料/          # 来自小宇宙、小红书等的长文材料
-├── 🧠 Knowledge/      # 整理后的知识库
-│   └── 周报/          # 工作周报、生活周报（每周六自动生成）
-├── 🗂️ MOC/            # Map of Content（内容索引）
+├── Daily/              # 每日日记（YYYY-MM-DD.md）
+├── Inbox/              # 临时收集箱，存放未整理的想法
+├── Knowledge/          # 永久知识库
+│   ├── 周报/           # 每周工作和生活总结
+│   ├── 参考材料/       # 访谈、文章等参考内容
+│   └── AI需求清单.md   # AI产品想法和需求
+├── MOC/                # Map of Content，内容索引
 │   ├── 日记索引.md
 │   └── 灵感索引.md
-├── 📋 _config/        # 系统配置和规则文档
+├── _config/            # 系统配置文档
+│   ├── 智能写入系统.md
+│   ├── 定时任务.md
 │   ├── 笔记写入规则.md
 │   ├── 红线准则.md
-│   ├── 定时任务.md
-│   ├── git-config.md
-│   ├── KimiVault-Structure.md
-│   └── archive/       # 历史备份文件
-└── 🔧 skills/         # Obsidian 操作技能脚本
+│   └── archive/        # 归档的旧文档
+├── skills/             # 自动化脚本
+└── 系统文件            # SOUL.md, USER.md, AGENTS.md等
 ```
 
-## 自动化任务
+---
 
-- 🌅 **每天 08:00**：自动抓取 AI 界大事记
-- 🌙 **每天 23:50**：自动记录 Claw 工作日志
-- 📊 **每周六 08:00**：自动生成工作周报和生活周报
+## 🤖 Kimi AI 协助系统
 
-详见 `_config/定时任务.md`
+### 智能写入
+当你在聊天窗口发送内容时，Kimi会自动：
+1. 识别内容类型（日记、知识笔记、灵感等）
+2. 写入到正确的文件和位置
+3. 提交并推送到GitHub
 
-## 笔记规则
+详见：[智能写入系统](_config/智能写入系统.md)
 
-详见 `_config/笔记写入规则.md` 和 `_config/红线准则.md`
+### 定时任务
+- **每天08:00：** 收集昨天的AI行业大事记
+- **每天23:50：** Kimi总结当天工作日志
+- **每周六08:00：** 生成工作周报和生活周报
 
-## 同步
+详见：[定时任务](_config/定时任务.md)
 
-此仓库通过 Git 自动同步到 MacBook 本地 Obsidian。
+---
+
+## 🎯 使用方式
+
+### 本地（MacBook）
+```bash
+cd ~/path/to/obsidian-vault
+git pull origin main  # 同步最新内容
+```
+
+在Obsidian中正常使用，修改后：
+```bash
+git add -A
+git commit -m "描述"
+git push origin main
+```
+
+### 通过Kimi
+直接在聊天窗口发送内容，例如：
+- "今天见了张三讨论项目" → 自动写入Daily
+- "学习了Python异步编程" → 自动写入Knowledge
+- "突然想到一个产品功能" → 自动写入Inbox
+
+---
+
+## 📊 统计信息
+
+- **创建日期：** 2026年初
+- **总笔记数：** 28+ 篇
+- **最近更新：** 2026-02-23
+- **Git提交数：** 持续增长中
+
+---
+
+## 🔗 相关链接
+
+- **GitHub仓库：** [abbozhang/kimi-obsidian-vault](https://github.com/abbozhang/kimi-obsidian-vault)
+- **Obsidian官网：** [obsidian.md](https://obsidian.md)
+
+---
+
+## 📝 更新日志
+
+### 2026-02-23
+- ✅ 重构文件夹结构，合并重复目录
+- ✅ 配置智能写入系统
+- ✅ 创建三个核心定时任务
+- ✅ 整理Inbox内容到Knowledge
+- ✅ 完善系统配置文档
+
+---
+
+_由 Kimi AI 维护，持续进化中_ 🚀
